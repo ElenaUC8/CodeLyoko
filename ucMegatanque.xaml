@@ -1,0 +1,212 @@
+﻿<UserControl
+    x:Class="CodeLyoko.ucMegatanque"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <Storyboard x:Key="Ataque">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-375.581"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="17.442"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-380.233"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="1.163"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.1000000" Value="-381.395"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_megatanque3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.1000000" Value="17.442"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="parte_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1.204"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1.01"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="1.01"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.2000000" Value="1.153"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="1.02"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="1.02"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.2000000" Value="1.153"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.3000000" Value="0.908"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="parte_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-11.628"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-0.581"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-0.581"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.2000000" Value="-8.721"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="-1.163"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-1.163"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.2000000" Value="-8.721"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.3000000" Value="5.232"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="parte_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-1.143"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-0.857"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-0.857"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.2000000" Value="-1.112"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="-0.775"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-0.775"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.2000000" Value="-0.959"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.3000000" Value="-0.786"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="parte_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="8.14"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-8.139"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-8.139"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.2000000" Value="6.396"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="-12.79"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-12.79"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.2000000" Value="-2.325"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.3000000" Value="-12.209"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+
+        </Grid.RowDefinitions>
+        <ProgressBar x:Name="pbVida_Megatanque" Grid.Column="1" HorizontalAlignment="Center" Width="720" Background="#6600FFB3" BorderBrush="#FF00FFB3" Foreground="#FF00FFB3" Value="100" Height="57"/>
+        <ProgressBar x:Name="pbEnergía_Megatanque" Grid.Column="1" HorizontalAlignment="Center" Width="720" Grid.Row="1" Value="100" Background="#66F1FF00" Foreground="#FFE6FF00" Height="46"/>
+        <Image x:Name="imRayo" Source="Imagenes/rayo.png" Margin="5,5,7,0" Grid.Row="1"/>
+        <Image x:Name="imCorazon" Source="Imagenes/corazon_azul.png" Margin="5,5,7,0" Grid.Row="0"/>
+        <Viewbox Grid.Column="1" Margin="36,26,76,45" Grid.Row="2">
+            <Canvas HorizontalAlignment="Center" Height="313" Grid.Row="2" VerticalAlignment="Center" Width="559" Grid.Column="1">
+                <Path x:Name="parte_dere" Data="M30,0.5 L30.5,0.50632733 30.5,59.493672 30,59.5 C13.7076,59.5 0.5,46.292401 0.5,30 0.5,13.7076 13.7076,0.50000018 30,0.5 z" HorizontalAlignment="Left" Height="239" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FF616060" Canvas.Left="422.333" Canvas.Top="37">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="parte_izq" Data="M30,0.5 L30.5,0.50632733 30.5,59.493672 30,59.5 C13.7076,59.5 0.5,46.292401 0.5,30 0.5,13.7076 13.7076,0.50000018 30,0.5 z" HorizontalAlignment="Left" Height="239" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="114" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FF616060" Canvas.Left="25.502" Canvas.Top="37">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Ellipse x:Name="fondo_símbolo" HorizontalAlignment="Left" Height="38" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="30" Grid.Column="1" Fill="#FFF5DC82" Canvas.Left="264.5" Canvas.Top="149.5"/>
+                <Path x:Name="símbolo_xana" Grid.Column="1" Data="M53.245203,112.35744 L53.177406,138.50593 44.448582,138.52853 44.516379,112.38004 z M19.023448,99.83807 L25.964867,105.08682 7.4414177,129.44206 0.5,124.19331 z M78.803516,99.683296 L97.200912,123.94294 90.232182,129.22771 71.834785,104.96806 z M47.644425,55.746862 C55.652554,55.746861 62.144424,62.462589 62.144424,70.74686 62.144424,79.031132 55.652554,85.746861 47.644425,85.746859 39.636296,85.746861 33.144424,79.031132 33.144426,70.74686 33.144424,62.462589 39.636296,55.746861 47.644425,55.746862 z M47.644425,46.746861 C34.665733,46.746861 24.144424,57.268169 24.144424,70.246861 24.144424,83.225552 34.665733,93.746861 47.644425,93.746861 60.623116,93.746861 71.144424,83.225552 71.144424,70.246861 71.144424,57.268169 60.623116,46.746861 47.644425,46.746861 z M47.644425,41.746861 C63.384541,41.746861 76.144424,54.506745 76.144424,70.246861 76.144424,85.986977 63.384541,98.746861 47.644425,98.746861 31.904309,98.746861 19.144424,85.986977 19.144424,70.246861 19.144424,54.506745 31.904309,41.746861 47.644425,41.746861 z M49.080421,35.375957 C41.409831,35.395821 34.322713,37.936646 28.607669,42.21099 20.254913,48.458112 14.833029,58.408181 14.804003,69.602785 14.755117,88.456848 30.021936,103.70146 48.903391,103.65258 67.784847,103.60369 83.130924,88.279819 83.17981,69.425754 83.228695,50.571686 67.961876,35.32707 49.080421,35.375957 z M49.099255,28.11249 C71.998043,28.0532 90.513119,46.541348 90.453835,69.406921 90.394547,92.272491 71.783348,110.85676 48.88456,110.91605 25.985768,110.97533 7.4706974,92.487186 7.5299816,69.621614 7.5651855,56.045184 14.140656,43.978074 24.270597,36.401785 31.201607,31.218002 39.796623,28.136576 49.099255,28.11249 z M53.535231,0.5 L53.467434,26.648497 44.738607,26.671091 44.806409,0.5226059 z" Fill="Black" HorizontalAlignment="Center" Height="59" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="35" Canvas.Left="262" Canvas.Top="139"/>
+                <Path x:Name="venas_izq" HorizontalAlignment="Left" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Grid.Column="1" Height="194" Stretch="Fill" Width="191" Fill="#FFF76566" Data="M94.88337,61.046059 L87.211983,97.419159 96.071961,90.23478 C96.559746,89.839241 97.286843,89.910675 97.695984,90.394333 L102.43971,96.001976 C102.84885,96.485634 102.78511,97.198365 102.29733,97.593895 L79.700234,115.91742 120.20561,129.14278 126.33662,101.65394 C126.38753,101.42566 126.50574,101.22966 126.66641,101.08124 L126.73566,101.02867 124.42182,99.38176 C123.90341,99.01278 123.78275,98.304917 124.15233,97.800721 L142.43315,72.860428 z M116.4223,0.50045758 C117.39418,0.51916724 118.30695,1.1113492 118.69115,2.075095 L119.43314,3.9364505 C119.94539,5.2214449 119.32395,6.6804059 118.04512,7.1951202 L106.05964,12.019149 159.48235,33.067013 C160.76489,33.572319 161.39693,35.026673 160.89406,36.315396 L160.1656,38.182156 C159.66272,39.470879 158.21535,40.105969 156.9328,39.600663 L102.12767,18.008135 C100.84512,17.502827 100.21308,16.048476 100.71596,14.75975 L100.98901,14.060031 63.398587,29.189781 C62.439458,29.575823 61.38295,29.321085 60.69854,28.627484 L60.539254,28.430353 60.447316,28.599476 C60.177765,28.999092 59.790642,29.324896 59.311085,29.517914 L29.225842,41.626915 83.920838,56.916558 C84.585709,57.102417 85.112298,57.540173 85.426201,58.097676 L85.536088,58.345562 87.27237,50.113163 C87.384987,49.579174 87.865944,49.216763 88.402131,49.224224 88.47873,49.225289 88.55645,49.233898 88.634392,49.250637 L95.863549,50.803307 C96.331177,50.903748 96.673714,51.268204 96.761452,51.701618 L96.764878,51.735993 145.7823,63.91502 C146.40128,64.068817 146.78224,64.684403 146.63323,65.289971 L145.95145,68.060448 154.94685,55.788113 C155.31644,55.283909 156.03629,55.174298 156.5547,55.543282 L162.56529,59.821427 C163.0837,60.190415 163.20436,60.898274 162.83479,61.402474 L133.06352,102.01903 134.92049,102.43945 C135.5425,102.58026 135.93668,103.18788 135.80092,103.79661 L129.76502,130.85904 164.37178,166.83421 168.78908,165.05631 183.11075,114.50044 182.86282,114.42311 C181.96755,114.04262 181.33937,113.15186 181.33937,112.11366 L181.33937,79.029068 C181.33937,77.644814 182.45615,76.52266 183.83376,76.52266 L187.82477,76.52266 C189.20238,76.52266 190.31915,77.644814 190.31915,79.029068 L190.31915,112.11366 C190.31915,112.28669 190.3017,112.45563 190.26846,112.6188 L190.25801,112.65266 190.37614,112.9239 C190.52583,113.38263 190.54549,113.88965 190.40405,114.38891 L174.28764,171.28023 C173.91049,172.61159 172.53064,173.38364 171.20566,173.00468 L169.28639,172.45572 169.237,172.43602 165.92641,173.76851 165.34293,174.33522 C164.72385,174.93648 163.87486,175.15144 163.09142,174.98511 L162.98633,174.95186 117.35095,193.31963 C116.07211,193.83434 114.62016,193.2099 114.1079,191.92491 L113.3659,190.06355 C112.85365,188.77856 113.47509,187.3196 114.75393,186.80489 L157.36929,169.65263 125.72118,136.7531 124.83772,139.44901 C124.64352,140.04161 123.99458,140.36153 123.38827,140.16354 L72.866967,123.66792 C72.298539,123.48232 71.969391,122.90744 72.090478,122.34802 72.098542,122.31073 72.10862,122.27349 72.120759,122.23647 L72.19796,122.00087 61.65263,130.55186 C61.164853,130.9474 60.437745,130.87596 60.028603,130.3923 L55.284882,124.78467 C55.029164,124.48238 54.958176,124.09061 55.059975,123.74274 55.121064,123.534 55.244355,123.34108 55.427277,123.19275 L80.396004,102.94611 77.443322,102.31193 C76.819817,102.17801 76.418709,101.57472 76.547417,100.96445 L80.05172,84.349106 33.823063,102.06526 C33.232548,102.29157 32.560937,102.00291 32.322976,101.42055 L29.563977,94.668343 C29.474728,94.449944 29.459155,94.221268 29.505681,94.008789 29.583203,93.654663 29.833251,93.345536 30.202324,93.204094 L80.690453,73.855599 C81.207146,73.657585 81.785943,73.853836 82.081978,74.296135 L82.146416,74.417336 84.575272,62.901184 84.329529,63.154682 C83.717812,63.674179 82.867364,63.890427 82.036286,63.658104 L23.288523,47.235539 C22.291224,46.956749 21.605048,46.111195 21.481108,45.144863 L21.469851,44.748623 4.6645618,51.512581 C3.3857182,52.027302 1.9337717,51.402859 1.4215114,50.117867 L0.67951438,48.256508 C0.16727166,46.971516 0.78870574,45.512554 2.0675331,44.997841 L56.714066,23.003174 C57.033772,22.874495 57.364304,22.817013 57.688267,22.823248 58.41718,22.837284 59.112839,23.173891 59.577195,23.747898 L59.579548,23.751301 59.665337,23.593481 C59.934887,23.193863 60.322011,22.868059 60.801568,22.67504 L115.44811,0.6803754 C115.76781,0.55169827 116.09834,0.49421638 116.4223,0.50045758 z" RenderTransformOrigin="0.972933613878016,0.492635990743964" Canvas.Left="69.059" Canvas.Top="116.315">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="38.29"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="venas_dere" HorizontalAlignment="Left" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Grid.Column="1" Data="M95.095871,60.891248 L87.407211,97.171341 96.287132,90.005333 C96.776016,89.610808 97.504753,89.682061 97.914818,90.164481 L102.66922,95.757784 C103.07928,96.240206 103.0154,96.951107 102.52651,97.345631 L79.878548,115.62231 120.47512,128.81385 126.61993,101.3953 C126.67096,101.1676 126.78943,100.9721 126.95046,100.82406 L127.01988,100.77163 124.70083,99.128929 C124.18125,98.760887 124.06032,98.05484 124.43073,97.551931 L142.75269,72.675408 z M88.600037,49.099638 C88.676804,49.1007 88.7547,49.109291 88.832817,49.125982 L96.078255,50.674686 C96.546936,50.774866 96.890244,51.138391 96.97818,51.570696 L96.981613,51.604984 146.1094,63.752874 C146.72976,63.906274 147.11159,64.520287 146.96223,65.124309 L146.27892,67.887703 155.29459,55.646744 C155.665,55.143829 156.38647,55.034498 156.90605,55.402538 L162.93018,59.669748 C163.44975,60.037791 163.57068,60.743839 163.20028,61.24675 L133.36199,101.75946 135.22313,102.17879 C135.84654,102.31925 136.24161,102.92532 136.10554,103.53248 L130.05605,130.52572 164.74073,166.40891 169.16796,164.63554 183.52189,114.20895 183.27341,114.13182 C182.37612,113.75229 181.74652,112.86381 181.74652,111.82828 L181.74652,78.828277 C181.74652,77.447566 182.86581,76.328278 184.24652,76.328278 L188.24652,76.328278 C189.62723,76.328278 190.74652,77.447566 190.74652,78.828277 L190.74652,111.82828 C190.74652,112.00087 190.72903,112.16937 190.69573,112.33211 L190.68524,112.36589 190.80365,112.63644 C190.95367,113.094 190.97337,113.59972 190.83162,114.0977 L174.67892,170.84354 C174.30092,172.1715 172.91796,172.9416 171.59,172.56359 L169.66641,172.01604 169.6169,171.9964 166.29886,173.32547 165.71407,173.89072 C165.0936,174.49047 164.24269,174.70487 163.45749,174.53896 L163.35216,174.5058 117.61403,192.82661 C116.33231,193.34 114.87709,192.71716 114.36369,191.43546 L113.62001,189.57886 C113.10661,188.29715 113.72945,186.84192 115.01116,186.32852 L157.72248,169.22013 126.00311,136.40471 125.11766,139.09372 C124.92303,139.68481 124.27262,140.00391 123.66495,139.80645 L73.029892,123.35299 C72.46019,123.16786 72.130295,122.59445 72.251656,122.03646 72.259743,121.99926 72.269844,121.96213 72.282005,121.92519 L72.359383,121.6902 61.790314,130.21933 C61.301437,130.61386 60.572693,130.5426 60.162628,130.06018 L55.408226,124.46688 C55.151932,124.16537 55.080788,123.7746 55.182816,123.42762 55.244041,123.21942 55.367607,123.02698 55.550941,122.87904 L80.575882,102.68416 77.616554,102.05161 C76.991646,101.91803 76.58963,101.31628 76.718628,100.70757 L80.230827,84.134711 33.898087,101.80557 C33.306244,102.03129 32.633118,101.74338 32.394623,101.1625 L29.62941,94.427557 C29.539963,94.209723 29.524353,93.981628 29.570984,93.769695 29.648682,93.416471 29.899292,93.108141 30.269196,92.96706 L80.870995,73.668034 C81.388855,73.47053 81.968948,73.666275 82.265656,74.107445 L82.330238,74.228335 87.467728,49.986305 C87.580605,49.453682 88.062645,49.092199 88.600037,49.099638 z M116.6833,0.50045776 C117.65736,0.51911926 118.57219,1.109787 118.95724,2.0710678 L119.70092,3.9276657 C120.21432,5.2093735 119.59148,6.6646042 118.30976,7.1780014 L106.2973,11.989697 159.84028,32.983742 C161.12572,33.487755 161.75918,34.938389 161.25517,36.22382 L160.52509,38.085804 C160.02107,39.371235 158.57044,40.0047 157.28501,39.500687 L102.35648,17.963367 C101.07104,17.459354 100.43758,16.00872 100.94159,14.723289 L101.21525,14.02536 63.540199,29.116428 C62.578911,29.50148 61.520027,29.247395 60.834076,28.555565 L60.674431,28.35894 60.582283,28.52763 C60.312126,28.926224 59.924133,29.251194 59.443497,29.443718 L4.6739349,51.382145 C3.3922119,51.895548 1.9369965,51.272707 1.423584,49.990995 L0.67991638,48.134401 C0.16651917,46.85269 0.78935242,45.397463 2.0710602,44.884062 L56.84063,22.945637 C57.161057,22.817287 57.492332,22.759953 57.817024,22.766171 58.547577,22.78017 59.244804,23.115917 59.710205,23.688457 L59.712563,23.691849 59.798546,23.534435 C60.068703,23.135838 60.456696,22.810867 60.937332,22.618343 L115.7069,0.67991638 C116.02733,0.55156708 116.3586,0.49423218 116.6833,0.50045776 z" Height="194" RenderTransformOrigin="0.972933613797774,0.49263598996455" Stretch="Fill" Width="191" Fill="#FFF76566" Canvas.Left="122.333" Canvas.Top="117.667">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-38.29"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle x:Name="laser_megatanque1" HorizontalAlignment="Left" Height="46" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="7" RadiusX="3" RadiusY="3" RenderTransformOrigin="0.5,0.5" Fill="Red" Grid.Column="1" Canvas.Left="243.488" Canvas.Top="148.884" Visibility="Collapsed">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-91.025"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="laser_megatanque2" Height="46" Stroke="Black" Width="7" RadiusX="3" RadiusY="3" RenderTransformOrigin="0.5,0.5" Fill="Red" Canvas.Left="243.488" Canvas.Top="148.884" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-91.025"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="laser_megatanque3" Height="46" Stroke="Black" Width="7" RadiusX="3" RadiusY="3" RenderTransformOrigin="0.5,0.5" Fill="Red" Canvas.Left="243.488" Canvas.Top="148.884" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-91.025"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</UserControl>

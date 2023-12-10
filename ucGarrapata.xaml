@@ -1,0 +1,164 @@
+﻿<UserControl
+    x:Class="CodeLyoko.ucGarrapata"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Storyboard x:Key="Ataque">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="-328"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="8"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-324"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="-15"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.1000000" Value="-361.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="laser_garrapata3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.1000000" Value="4.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+
+        </Grid.RowDefinitions>
+        <ProgressBar x:Name="pbVida_Garrapata" Grid.Column="1" HorizontalAlignment="Center" Width="720" Background="#6600FFB3" BorderBrush="#FF00FFB3" Foreground="#FF00FFB3" Value="100" Height="30"/>
+        <ProgressBar x:Name="pbEnergía_Garrapata" Grid.Column="1" HorizontalAlignment="Center" Width="720" Grid.Row="1" Value="100" Background="#66F1FF00" Foreground="#FFE6FF00" Height="30"/>
+        <Image x:Name="imRayo" Source="Imagenes/rayo.png" Margin="5,5,7,0" Grid.Row="1"/>
+        <Image x:Name="imCorazon" Source="Imagenes/corazon_azul.png" Margin="5,5,7,0" Grid.Row="0"/>
+        <Viewbox Grid.Column="1" Margin="29,6,30,10" Grid.Row="2">
+            <Canvas HorizontalAlignment="Center" Height="313" Grid.Row="2" VerticalAlignment="Center" Width="559" Grid.Column="1">
+                <Path x:Name="cuerpo" Data="M17,371.54 C15.001111,366.28868 22.473153,364.1788 13,365.04 11.595442,365.16769 9.3773869,365.49913 8,365.04 5.8616216,364.32721 6.5,363.33483 6.5,360.54 6.5,352.15566 12.451571,351.05141 9.5,343.04 3.0230323,325.45966 10.47865,323.60405 16,307.04 17.087314,309.21463 18.46114,311.57886 22.5,307.54 24.971686,305.06831 24.382697,302.36346 28.5,301.54 29.888153,298.76369 37.346758,293.59108 40.5,292.54 40.5,297.09923 42.241777,296.28836 48.5,297.54 53.773367,298.59467 52.923967,300.11603 57.5,295.54 59.692108,299.92422 62.432327,306.33698 64,311.04 64.333333,311.04 64.666667,311.04 65,311.04 66.249477,312.08123 65.413281,314.71344 67.5,310.54 72.018756,319.57751 59.439376,327.07994 75.5,328.54 84.968474,329.40077 82,334.16435 82,347.54 63.346226,347.54 61.992282,344.98952 53.5,368.04 50.126802,377.19582 45.782659,371.61245 35.5,375.04 32.013788,376.20207 27.953326,375.54 24,375.54 15.581518,375.54 21.111421,377.1292 16.5,370.04" Fill="#FFEDDC88" HorizontalAlignment="Left" Height="180" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="161" Grid.Column="1" Canvas.Left="219.5" Canvas.Top="66.5"/>
+                <Path x:Name="pata3" Data="M14,416.04 C14.49078,411.62298 13.261183,410.19176 16,406.54 17.686692,404.29108 19.187912,403.19604 21.5,402.04 25.867219,399.85639 30.504319,397.04216 36.5,400.04 26.421771,400.04 20.645978,406.40815 14,416.04 z" Fill="#FF9C9494" HorizontalAlignment="Left" Height="36" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="45" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="285.5" Canvas.Top="254">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="115.68"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="pata2" Data="M14,416.04 C14.49078,411.62298 13.261183,410.19176 16,406.54 17.686692,404.29108 19.187912,403.19604 21.5,402.04 25.867219,399.85639 30.504319,397.04216 36.5,400.04 26.421771,400.04 20.645978,406.40815 14,416.04 z" Fill="#FF9C9494" HorizontalAlignment="Left" Height="42" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Canvas.Left="246.5" Canvas.Top="252">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-31.635"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="pata1" Data="M14,416.04 C14.49078,411.62298 13.261183,410.19176 16,406.54 17.686692,404.29108 19.187912,403.19604 21.5,402.04 25.867219,399.85639 30.504319,397.04216 36.5,400.04 26.421771,400.04 20.645978,406.40815 14,416.04 z" Fill="#FF9C9494" HorizontalAlignment="Left" Height="44" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="58" Grid.Column="1" Canvas.Left="193.5" Canvas.Top="242"/>
+                <Path x:Name="pata4" Data="M14,416.04 C14.49078,411.62298 13.261183,410.19176 16,406.54 17.686692,404.29108 19.187912,403.19604 21.5,402.04 25.867219,399.85639 30.504319,397.04216 36.5,400.04 26.421771,400.04 20.645978,406.40815 14,416.04 z" Fill="#FF9C9494" HorizontalAlignment="Left" Height="49" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Canvas.Left="308.5" Canvas.Top="240">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="símbolo_xana" Grid.Column="1" Data="M53.245203,112.35744 L53.177406,138.50593 44.448582,138.52853 44.516379,112.38004 z M19.023448,99.83807 L25.964867,105.08682 7.4414177,129.44206 0.5,124.19331 z M78.803516,99.683296 L97.200912,123.94294 90.232182,129.22771 71.834785,104.96806 z M47.644425,55.746862 C55.652554,55.746861 62.144424,62.462589 62.144424,70.74686 62.144424,79.031132 55.652554,85.746861 47.644425,85.746859 39.636296,85.746861 33.144424,79.031132 33.144426,70.74686 33.144424,62.462589 39.636296,55.746861 47.644425,55.746862 z M47.644425,46.746861 C34.665733,46.746861 24.144424,57.268169 24.144424,70.246861 24.144424,83.225552 34.665733,93.746861 47.644425,93.746861 60.623116,93.746861 71.144424,83.225552 71.144424,70.246861 71.144424,57.268169 60.623116,46.746861 47.644425,46.746861 z M47.644425,41.746861 C63.384541,41.746861 76.144424,54.506745 76.144424,70.246861 76.144424,85.986977 63.384541,98.746861 47.644425,98.746861 31.904309,98.746861 19.144424,85.986977 19.144424,70.246861 19.144424,54.506745 31.904309,41.746861 47.644425,41.746861 z M49.080421,35.375957 C41.409831,35.395821 34.322713,37.936646 28.607669,42.21099 20.254913,48.458112 14.833029,58.408181 14.804003,69.602785 14.755117,88.456848 30.021936,103.70146 48.903391,103.65258 67.784847,103.60369 83.130924,88.279819 83.17981,69.425754 83.228695,50.571686 67.961876,35.32707 49.080421,35.375957 z M49.099255,28.11249 C71.998043,28.0532 90.513119,46.541348 90.453835,69.406921 90.394547,92.272491 71.783348,110.85676 48.88456,110.91605 25.985768,110.97533 7.4706974,92.487186 7.5299816,69.621614 7.5651855,56.045184 14.140656,43.978074 24.270597,36.401785 31.201607,31.218002 39.796623,28.136576 49.099255,28.11249 z M53.535231,0.5 L53.467434,26.648497 44.738607,26.671091 44.806409,0.5226059 z" Fill="Black" HorizontalAlignment="Left" Height="139" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="98" Canvas.Left="230.5" Canvas.Top="81.5"/>
+                <Ellipse HorizontalAlignment="Center" Height="21" Grid.Row="2" Stroke="Red" VerticalAlignment="Top" Width="22" Fill="Red" Grid.Column="1" Canvas.Left="268.5" Canvas.Top="220.5"/>
+                <Path Data="M29,5.4999995 C16.021309,5.5 5.5,16.021309 5.4999995,29 5.5,41.978691 16.021309,52.5 29,52.5 41.978691,52.5 52.5,41.978691 52.5,29 52.5,16.021309 41.978691,5.5 29,5.4999995 z M29,0.5 C44.740116,0.5 57.5,13.259885 57.5,29 57.5,44.740116 44.740116,57.5 29,57.5 13.259885,57.5 0.5,44.740116 0.5,29 0.5,13.259885 13.259885,0.5 29,0.5 z" HorizontalAlignment="Center" Height="26" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="28" Fill="#FF968B8B" Grid.Column="1" Canvas.Left="265.5" Canvas.Top="218"/>
+                <Rectangle x:Name="laser_garrapata1" HorizontalAlignment="Center" Height="68" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="14" RadiusX="4.5" RadiusY="4.5" RenderTransformOrigin="0.5,0.5" Fill="Red" Grid.Column="1" Canvas.Left="237.833" Canvas.Top="198.5" Visibility="Collapsed">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90.139"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="laser_garrapata2" Height="68" Stroke="Black" Width="14" RadiusX="4.5" RadiusY="4.5" RenderTransformOrigin="0.5,0.5" Fill="Red" Canvas.Left="237.833" Canvas.Top="198.5" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90.139"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="laser_garrapata3" Height="68" Stroke="Black" Width="14" RadiusX="4.5" RadiusY="4.5" RenderTransformOrigin="0.5,0.5" Fill="Red" Canvas.Left="237.833" Canvas.Top="198.5" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90.139"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+
+        </Viewbox>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="CodeLyoko.InfoYumi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Image x:Name="img_montana" Source="/Imagenes/fondo_montana.jpg" Stretch="Fill"/>
+        <Image x:Name="img_Yumi" Source="/Imagenes/imagen_yumi.png" Margin="-31,24,427,-55"/>
+        <TextBox x:Name="txb_titulo" HorizontalAlignment="Left" Height="105" Margin="543,50,0,0" TextWrapping="Wrap" Text="YUMI" VerticalAlignment="Top" Width="321" TextAlignment="Center" FontSize="72" FontFamily="Showcard Gothic" Background="{x:Null}" Foreground="#FFE44352" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txb_info" HorizontalAlignment="Left" Height="288" Margin="487,0,0,0" TextWrapping="Wrap" Text="Yumi Ishiyama nació en 1990 y tiene 14 años. Es de origen japonés. Es generosa y amable. Es experta en artes marciales. Sus armas en Lyoko son dos abanicos shuriken que se lanzan como un bumerán, y también le sirven como escudo. Además, dispone del poder de la telekinesis. Es muy ágil, lo que le permite esquivar los disparos de los monstruos con facilidad, además de un gran equilibrio" VerticalAlignment="Center" Width="434" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" FontFamily="Verdana" TextAlignment="Justify"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,808 @@
+﻿<UserControl
+    x:Class="CodeLyoko.ucYumi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <Storyboard x:Key="Ataque">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="boca_abierta" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="boca" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="brazo_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-29.823"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-131.019"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-131.019"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-35.188"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="brazo_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="29.823"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="125.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="125.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="33.701"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="19.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="32"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="38"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="32.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="19.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="19.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="31.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="36.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="33.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="23.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="5.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-16.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-39"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-64.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-89.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-113.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-113.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-90.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-67"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-42.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-19.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-30.207"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-50.993"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-72.387"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-88.274"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-108.762"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-131.119"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-131.119"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-113.658"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-92.252"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-74.654"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-55.395"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-34.429"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-19.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-32.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-37.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-35.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-23.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-23.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-33.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-37.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-33.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-21.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-4.25"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-16.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-37.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-60.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-84.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-107.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-107.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-85.25"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-61.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-39.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-18.75"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-2.75"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="30.207"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="50.068"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="65"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="87.306"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="105.203"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="124.817"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="124.817"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="108.172"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="89.855"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="70.707"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="53.159"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="34.702"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="3.491"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-22.509"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-40.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-47.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-46.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-29.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-29.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-40.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-45.676"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-40.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-24.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-0.176"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-24.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-50.611"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-82.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-114.611"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-144.945"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-144.945"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-114.945"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-83.445"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-55.445"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-26.445"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-1.945"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="23.672"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="52.851"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="52.851"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="52.851"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="32.708"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="3.491"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="30.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="47.157"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="53.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="47.157"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="29.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="29.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="46.324"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="53.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="48.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="34.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="9.324"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-24.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-54.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-88.277"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-124.277"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-153.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-153.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-123.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-90.444"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-55.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-25.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-3.444"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-23.672"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-54.079"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-54.079"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-54.079"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-12.84"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="42.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="237.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="35.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="35.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="49.833"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="53.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="49.833"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="35.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="6.833"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-23.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-53.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-80.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="-162.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-162.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-126.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-91.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-58.167"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-26.167"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0.833"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="474.494"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="804.881"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.3000000" Value="836.654"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="836.654"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-27"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-41"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="399"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-38"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-48.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-57"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-50.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-34"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-52"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-53"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-163"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-132.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-101.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-72"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-33.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-474.494"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-252.648"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-66.815"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-66.815"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-85.965"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-85.965"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-105.405"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Defensa">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="brazo_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="29.823"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-83.916"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-83.916"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="34.135"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="27.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="56.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="82.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="101"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="110.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="110.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="99.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="81.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="52.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="23.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-5.001"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="8.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-29.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-57.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-57.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-26.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-6.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="6.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="8.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-3.666"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="30.207"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="3.888"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-14.398"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-37.002"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-61.461"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-84.508"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-84.508"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-61.076"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-37.533"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-16.605"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="8.973"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="34.711"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="3.491"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="43.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="80.158"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="115.491"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="139.824"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="149.157"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="149.157"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="135.49"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="108.157"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="70.823"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="34.156"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-4.511"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="13.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="7.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-11.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-42.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-75.945"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-75.945"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-36.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-5.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="9.722"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="10.722"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-4.611"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_izq" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="23.672"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-6.263"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-22.779"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-43.26"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-43.26"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-114.751"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-114.751"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-114.751"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-9.811"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-9.811"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="7.599"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="brazo_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-29.823"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="83.327"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="83.327"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-30.375"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="9.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="7"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-55.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-55.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-27"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-6.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="6.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="8.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-0.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-27"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-55.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-81.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-101.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-110.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-110.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-101.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-82.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-54.668"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-26.668"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0.665"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="manga_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-30.207"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-5.124"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="14.147"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="36.661"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="59.477"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="81.325"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="81.325"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="62.654"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="39.757"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="13.883"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-11.486"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-30.309"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="3.491"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-33.509"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-72.509"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-106.842"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-129.842"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-141.175"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-141.175"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-129.842"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-102.509"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-63.509"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-28.176"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="7.158"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="13.056"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="8.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-8.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-37.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-73.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-73.944"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-37.611"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-7.278"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="10.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="12.389"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-1.612"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-23.672"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.555"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="41.19"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="51.537"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="83.725"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="83.725"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="83.725"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="83.725"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="61.585"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="14.208"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-474.494"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-506.141"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-506.141"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-536.12"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-585.113"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-585.113"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-585.113"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-585.113"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-543.803"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-543.803"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-502.795"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="18.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="14.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-3.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-42.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-83.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-83.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-41.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-12.665"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="12.668"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="15.335"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="1.002"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="49.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="78.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="135.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="169.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="184.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="184.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="174.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="142.668"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="91.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="51.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0.668"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="474.494"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="502.831"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="502.831"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="543.435"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="577.443"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="577.443"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="577.443"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="577.443"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="558.274"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="531.936"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="513.805"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="-39.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-75.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-126.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-165.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-182.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-182.001"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-168.668"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-139.335"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="-98.002"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="-53.335"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-8.001"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="abanico2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="17"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="17.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="4.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-33"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="-69.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="-69.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.6000000" Value="-33.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.7000000" Value="-2.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.8000000" Value="15.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.9000000" Value="21.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="8.999"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="boca" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="boca_abierta" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+
+        </Grid.RowDefinitions>
+        <ProgressBar x:Name="pbVida_Yumi" Grid.Column="1" HorizontalAlignment="Center" Width="720" Background="#6600FFB3" BorderBrush="#FF00FFB3" Foreground="#FF00FFB3" Value="100" Height="30"/>
+        <ProgressBar x:Name="pbEnergía_Yumi" Grid.Column="1" HorizontalAlignment="Center" Width="720" Grid.Row="1" Value="100" Background="#66F1FF00" Foreground="#FFE6FF00" Height="30"/>
+        <Image x:Name="imRayo" Source="Imagenes/rayo.png" Margin="5,5,7,0" Grid.Row="1"/>
+        <Image x:Name="imCorazon" Source="Imagenes/corazon_azul.png" Margin="5,5,7,0" Grid.Row="0"/>
+        <Viewbox Margin="32,6,0,-1" Grid.Row="2" Grid.ColumnSpan="2">
+            <Canvas Grid.Column="1" HorizontalAlignment="Left" Height="313" Margin="28,24,0,0" Grid.Row="2" VerticalAlignment="Top" Width="559">
+                <Rectangle HorizontalAlignment="Left" Height="15" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="16" Fill="#FFFBECDD" Grid.Column="1" Canvas.Left="254.484" Canvas.Top="86"/>
+                <Path Data="M24,275.04 C34.665749,281.42122 44.193583,288.63679 55,294.04 62.658271,290.21086 68.341286,284.69871 75,278.04 84.994256,268.04574 90,272.71292 90,255.04 90,227.58029 101.46534,220.23161 67,206.04 56.689657,201.79456 49.656827,202.04 37,202.04 26.054694,202.04 24.489271,208.57219 20,222.04 11.595654,247.25304 8.6106945,249.4781 24,275.04 z" Fill="#FFFBECDD" HorizontalAlignment="Left" Height="93" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="80" Grid.Column="1" Canvas.Left="219.484"/>
+                <Path Data="M49.04689,47.685159 C48.880089,48.021829 48.713272,48.358529 48.546471,48.69523 48.607956,48.544503 49.002373,47.760018 49.04689,47.685159 z M26.753208,0.5 C27.237167,1.9759188 27.252871,3.0983162 27.252871,4.8174605 27.327248,4.4394164 31.5,-1.781352 31.5,2.4047623 31.5,3.6212969 30.953037,3.9775014 29.751182,4.8174605 28.676609,5.5684633 28.770971,5.9849741 28.844135,7.2339857 L28.859844,7.5326498 28.938652,7.5324463 C43.034733,7.4866637 42.75856,6.9798155 52.299622,21.423379 54.779449,25.177407 56.742096,30.7949 54.551506,36.321877 52.694015,41.008431 52.093094,44.610818 48.296257,48.442697 48.546471,48.190194 48.796677,47.937661 49.04689,47.685159 48.099274,48.641488 39.797295,59.785348 44.2929,48.442697 46.443657,43.016244 45.794159,38.661752 45.794159,32.534127 45.794159,29.932382 45.974998,28.318826 45.043533,25.968667 44.298263,24.088326 43.610397,21.966531 42.291222,20.413308 40.880783,18.752603 39.740623,17.09562 38.037651,15.86799 36.253258,14.581674 34.778397,14.148232 32.783241,13.342812 32.373131,14.998391 38.525177,20.42109 36.035973,21.928414 32.364242,24.151742 32.556946,20.209023 30.030935,15.110452 29.029879,17.131021 29.742781,20.528176 29.030096,22.685952 24.962,23.507058 25.527159,23.766824 25.527159,16.120522 24.696455,21.150674 24.485514,23.190988 16.769812,23.190988 16.769812,20.739663 24.308935,14.965524 18.77149,13.847848 12.704058,12.623178 13.330694,13.731912 9.5137233,20.665811 5.0364837,28.799172 4.3334731,40.359109 7.2618346,50.210305 5.4762458,48.891305 4.2158565,49.189614 3.7588958,46.422555 3.5920905,46.422555 3.4252834,46.422555 3.258476,46.422555 2.460659,41.5915 0.50616831,37.729501 0.50616813,32.534127 0.50616831,26.515573 0.28390115,23.086434 2.5078472,17.635629 4.3546104,13.109262 7.8544177,12.684976 12.015821,10.060098 16.251749,7.3882341 20.116831,7.4587932 25.247648,7.5181809 L25.462118,7.5205761 25.475267,7.5002833 C25.63216,7.1742982 25.291897,6.7529316 24.005066,6.214286 23.261845,5.9031855 22.887241,5.7128707 22.256248,5.0714288 21.376863,4.1774814 21.506756,4.2669237 21.506756,2.7857141 22.430061,2.7857141 22.837797,2.898118 23.63032,3.1666665 23.811619,3.7195709 24.731716,4.7942376 25.254223,5.3253968 25.254223,4.3095238 25.254223,3.2936506 25.254223,2.2777772 25.254223,0.75604868 24.060577,0.5 26.753208,0.5 z" Fill="Black" HorizontalAlignment="Left" Height="98" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="92" Grid.Column="1" Canvas.Left="213.484" Canvas.Top="-19"/>
+                <Path x:Name="ojo_izq" Data="M23.666667,251.20667 C22.578723,250.66734 21.718741,250.27511 20.666667,249.37333 22.524633,247.51537 25.445076,246.92826 27.333333,245.04 29.507609,246.59305 32.441016,246.64768 34.333333,248.54 32.847063,248.83725 32.694048,249.56639 31.666667,250.70667" Fill="White" HorizontalAlignment="Left" Height="8" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="229.484" Canvas.Top="30"/>
+                <Path x:Name="ojo_izq_Copy" Data="M23.666667,251.20667 C22.578723,250.66734 21.718741,250.27511 20.666667,249.37333 22.524633,247.51537 25.445076,246.92826 27.333333,245.04 29.507609,246.59305 32.441016,246.64768 34.333333,248.54 32.847063,248.83725 32.694048,249.56639 31.666667,250.70667" Fill="White" HorizontalAlignment="Left" Height="8" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="18" Grid.Column="1" Canvas.Left="264.484" Canvas.Top="30"/>
+                <Ellipse HorizontalAlignment="Left" Height="4" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="4" Fill="Black" Grid.Column="1" Canvas.Left="236.484" Canvas.Top="33"/>
+                <Path Grid.Column="1" Data="M108.75,157.79 C104.77097,159.57009 100.45313,161.73097 97.25,165.29 96.002879,166.67569 101.00812,169.54914 103,171.79 104.46929,173.44295 105.85694,174.8222 107.5,176.29" Fill="#00F4F4F5" HorizontalAlignment="Left" Height="8" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="4" Canvas.Left="255.484" Canvas.Top="49"/>
+                <Path x:Name="boca" Data="M11.25,170.79 C26.05552,178.37332 21.871233,180.28314 39,172.54" Fill="#00F4F4F5" HorizontalAlignment="Left" Height="7" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="28" Grid.Column="1" Canvas.Left="244.484" Canvas.Top="67"/>
+                <Path Data="M48.125,157.04 C49.71093,153.96726 50.775073,150.33773 55.75,150.79 58.356485,151.02695 61.795753,152.46075 63.875,154.54 60.92727,154.54 57.907875,153.41764 55,154.29 52.617545,155.00474 50.125165,155.63172 48.125,157.04 z" Fill="Black" HorizontalAlignment="Left" Height="5" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="17" Grid.Column="1" Canvas.Left="230.484" Canvas.Top="25"/>
+                <Path Data="M48.125,157.04 C49.71093,153.96726 50.775073,150.33773 55.75,150.79 58.356485,151.02695 61.795753,152.46075 63.875,154.54 60.92727,154.54 57.907875,153.41764 55,154.29 52.617545,155.00474 50.125165,155.63172 48.125,157.04 z" Fill="Black" HorizontalAlignment="Left" Height="5" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="17" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="266.484" Canvas.Top="25">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle HorizontalAlignment="Left" Height="107" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="64" RadiusX="3.833" RadiusY="3.833" Grid.Column="1" Fill="#FFE6CCCC" Canvas.Left="231.484" Canvas.Top="101"/>
+                <Path x:Name="pierna_dere" Data="M0.5,0.5 L27.5,0.5 27.5,1.3811178 39.640499,3.5611634 27.5,71.170624 27.5,73.5 0.5,73.5 z" HorizontalAlignment="Left" Height="112" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.409,0.01" Grid.Column="1" Fill="#FFA73C41" Canvas.Left="275.988" Canvas.Top="201">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M38,254.04 C43.5,254.04 49,254.04 54.5,254.04 54.5,274.04208 55,293.47732 55,313.54 40.404239,313.54 25.735761,314.04 11,314.04 11,303.915 19.065407,293.46351 23.5,284.04 28.667262,273.05957 31.112377,263.84162 38,254.04 z" HorizontalAlignment="Left" Height="120" Grid.Row="2" Stroke="#FFFFF500" Stretch="Fill" VerticalAlignment="Top" Width="47" RenderTransformOrigin="0.5,0.5" Fill="Red" Grid.Column="1" Canvas.Left="248.484" Canvas.Top="101">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="pierna_izq" Data="M0.5,0.5 L27.5,0.5 27.5,1.3811178 39.640499,3.5611634 27.5,71.170624 27.5,73.5 0.5,73.5 z" HorizontalAlignment="Left" Height="112" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.409,0.01" Grid.Column="1" Fill="#FFA73C41" Canvas.Left="231.484" Canvas.Top="201">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M38,254.04 C43.5,254.04 49,254.04 54.5,254.04 54.5,274.04208 55,293.47732 55,313.54 40.404239,313.54 25.735761,314.04 11,314.04 11,303.915 19.065407,293.46351 23.5,284.04 28.667262,273.05957 31.112377,263.84162 38,254.04 z" HorizontalAlignment="Left" Height="120" Grid.Row="2" Stroke="#FFFFEA00" Stretch="Fill" VerticalAlignment="Top" Width="61" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="Black" Canvas.Left="231.484" Canvas.Top="101">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="mano_izq" HorizontalAlignment="Left" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Data="M10.952487,8.7975397 L12.076487,8.7975397 C12.318388,8.7975397 12.514487,8.993639 12.514487,9.2355399 L12.514487,13.35954 C12.514487,13.60144 12.318388,13.79754 12.076487,13.79754 L10.952487,13.79754 C10.710587,13.79754 10.514487,13.60144 10.514487,13.35954 L10.514487,9.2355399 C10.514487,8.993639 10.710587,8.7975397 10.952487,8.7975397 z M8.1912749,8.6940649 C8.2203772,8.6937994 8.2499396,8.6964464 8.2796172,8.7022378 L9.3828087,8.9175158 C9.6202312,8.9638466 9.7751415,9.1938742 9.7288107,9.4312966 L8.9389471,13.478949 C8.8926162,13.716372 8.6625887,13.871282 8.4251664,13.824951 L7.3219748,13.609673 C7.0845523,13.563342 6.929642,13.333314 6.9759729,13.095892 L7.7658365,9.0482396 C7.806376,8.8404949 7.9875584,8.6959237 8.1912749,8.6940649 z M6.0245154,7.7695227 C6.0951416,7.7699994 6.166661,7.7876043 6.2328415,7.8241365 L7.2168732,8.3673286 C7.4286506,8.4842313 7.5055618,8.7506792 7.3886592,8.9624568 L5.3956656,12.572907 C5.2787628,12.784685 5.0123153,12.861596 4.8005376,12.744693 L3.8165059,12.201501 C3.6047282,12.084599 3.5278172,11.818151 3.6447196,11.606373 L5.6377134,7.9959225 C5.7180839,7.8503255 5.8691378,7.7684738 6.0245154,7.7695227 z M4.4648237,6.3466487 C4.6053596,6.3510565 4.7412677,6.4229232 4.8219347,6.5507927 L5.4216514,7.5014326 C5.5507188,7.7060238 5.4894948,7.9765076 5.2849035,8.105575 L1.7969685,10.305958 C1.5923767,10.435025 1.3218937,10.373801 1.1928263,10.16921 L0.59310913,9.2185699 C0.46404171,9.0139789 0.52526569,8.7434951 0.72985744,8.6144277 L4.2177925,6.4140449 C4.2945142,6.3656446 4.3805022,6.344004 4.4648237,6.3466487 z M9.0422795,1.7082324 C9.5226938,1.7083492 10.018482,1.7884817 10.507893,1.9574771 12.596046,2.678525 13.77737,4.7442348 13.146453,6.5713691 12.515536,8.3985035 10.311294,9.2951638 8.2231407,8.5741158 6.1349871,7.8530681 4.9536633,5.7873583 5.5845804,3.9602242 6.067626,2.5613241 7.4729259,1.7078514 9.0422795,1.7082324 z M1.2289848,0.50017309 C1.2720575,0.4989562 1.316041,0.5041256 1.3597136,0.51636791 L5.3306518,1.6294827 C5.5635743,1.6947746 5.6994658,1.9365249 5.6341743,2.1694479 L5.3307934,3.2517304 C5.265502,3.484653 5.0237513,3.6205449 4.7908287,3.555253 L0.81989002,2.4421382 C0.58696747,2.3768463 0.45107651,2.1350956 0.51636791,1.902173 L0.81974888,0.81989002 C0.87279797,0.63064051 1.0423384,0.50544643 1.2289848,0.50017309 z" Height="23" RenderTransformOrigin="0.775,0.179" Stretch="Fill" Width="22" Grid.Column="1" Fill="#FFFBECDD" Canvas.Left="172.484" Canvas.Top="187">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="23.672"/>
+                            <TranslateTransform X="3.491" Y="0.389"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="mano_dere" HorizontalAlignment="Left" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Data="M10.952487,8.7975397 L12.076487,8.7975397 C12.318388,8.7975397 12.514487,8.993639 12.514487,9.2355399 L12.514487,13.35954 C12.514487,13.60144 12.318388,13.79754 12.076487,13.79754 L10.952487,13.79754 C10.710587,13.79754 10.514487,13.60144 10.514487,13.35954 L10.514487,9.2355399 C10.514487,8.993639 10.710587,8.7975397 10.952487,8.7975397 z M8.1912749,8.6940649 C8.2203772,8.6937994 8.2499396,8.6964464 8.2796172,8.7022378 L9.3828087,8.9175158 C9.6202312,8.9638466 9.7751415,9.1938742 9.7288107,9.4312966 L8.9389471,13.478949 C8.8926162,13.716372 8.6625887,13.871282 8.4251664,13.824951 L7.3219748,13.609673 C7.0845523,13.563342 6.929642,13.333314 6.9759729,13.095892 L7.7658365,9.0482396 C7.806376,8.8404949 7.9875584,8.6959237 8.1912749,8.6940649 z M6.0245154,7.7695227 C6.0951416,7.7699994 6.166661,7.7876043 6.2328415,7.8241365 L7.2168732,8.3673286 C7.4286506,8.4842313 7.5055618,8.7506792 7.3886592,8.9624568 L5.3956656,12.572907 C5.2787628,12.784685 5.0123153,12.861596 4.8005376,12.744693 L3.8165059,12.201501 C3.6047282,12.084599 3.5278172,11.818151 3.6447196,11.606373 L5.6377134,7.9959225 C5.7180839,7.8503255 5.8691378,7.7684738 6.0245154,7.7695227 z M4.4648237,6.3466487 C4.6053596,6.3510565 4.7412677,6.4229232 4.8219347,6.5507927 L5.4216514,7.5014326 C5.5507188,7.7060238 5.4894948,7.9765076 5.2849035,8.105575 L1.7969685,10.305958 C1.5923767,10.435025 1.3218937,10.373801 1.1928263,10.16921 L0.59310913,9.2185699 C0.46404171,9.0139789 0.52526569,8.7434951 0.72985744,8.6144277 L4.2177925,6.4140449 C4.2945142,6.3656446 4.3805022,6.344004 4.4648237,6.3466487 z M9.0422795,1.7082324 C9.5226938,1.7083492 10.018482,1.7884817 10.507893,1.9574771 12.596046,2.678525 13.77737,4.7442348 13.146453,6.5713691 12.515536,8.3985035 10.311294,9.2951638 8.2231407,8.5741158 6.1349871,7.8530681 4.9536633,5.7873583 5.5845804,3.9602242 6.067626,2.5613241 7.4729259,1.7078514 9.0422795,1.7082324 z M1.2289848,0.50017309 C1.2720575,0.4989562 1.316041,0.5041256 1.3597136,0.51636791 L5.3306518,1.6294827 C5.5635743,1.6947746 5.6994658,1.9365249 5.6341743,2.1694479 L5.3307934,3.2517304 C5.265502,3.484653 5.0237513,3.6205449 4.7908287,3.555253 L0.81989002,2.4421382 C0.58696747,2.3768463 0.45107651,2.1350956 0.51636791,1.902173 L0.81974888,0.81989002 C0.87279797,0.63064051 1.0423384,0.50544643 1.2289848,0.50017309 z" Height="23" RenderTransformOrigin="0.775,0.179" Stretch="Fill" Width="22" Grid.Column="1" Fill="#FFFBECDD" Canvas.Left="314.484" Canvas.Top="186">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-23.672"/>
+                            <TranslateTransform X="3.491" Y="0.389"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle x:Name="media_izq" HorizontalAlignment="Left" Height="46" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="17" RadiusX="5.5" RadiusY="5.5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFAB9B9B" Canvas.Left="231.484" Canvas.Top="260">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="1.819"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Path x:Name="zapato_izq" Data="M46,0.5 L58,0.5 C58.828426,0.50000048 59.5,1.1715732 59.5,2.0000005 L59.5,11.884 59.5,28 59.5,42.884 C59.5,45.093141 57.709141,46.884 55.5,46.884 L25,46.884 19.5,46.884 C18.533501,46.884 17.647064,46.541219 16.955627,45.970594 L16.69558,45.734247 16.576078,45.700746 C7.1949606,42.966856 0.5,35.797714 0.5,27.384 0.5,18.970288 7.1949606,11.801145 16.576078,9.0672547 L16.69558,9.0337539 16.955627,8.7974052 C17.647064,8.226782 18.533501,7.8840001 19.5,7.8840002 L25,7.8840002 44.5,7.8840002 44.5,2.0000005 C44.5,1.1715732 45.171574,0.50000048 46,0.5 z" HorizontalAlignment="Left" Height="12" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="28" Grid.Column="1" Fill="Black" RenderTransformOrigin="0.536,0.59" Canvas.Left="219.484" Canvas.Top="301">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle x:Name="media_dere" HorizontalAlignment="Left" Height="46" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="17" RadiusX="5.5" RadiusY="5.5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFAB9B9B" Canvas.Left="278.484" Canvas.Top="260">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-2.119"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Path x:Name="zapato_dere" Data="M46,0.5 L58,0.5 C58.828426,0.50000048 59.5,1.1715732 59.5,2.0000005 L59.5,11.884 59.5,28 59.5,42.884 C59.5,45.093141 57.709141,46.884 55.5,46.884 L25,46.884 19.5,46.884 C18.533501,46.884 17.647064,46.541219 16.955627,45.970594 L16.69558,45.734247 16.576078,45.700746 C7.1949606,42.966856 0.5,35.797714 0.5,27.384 0.5,18.970288 7.1949606,11.801145 16.576078,9.0672547 L16.69558,9.0337539 16.955627,8.7974052 C17.647064,8.226782 18.533501,7.8840001 19.5,7.8840002 L25,7.8840002 44.5,7.8840002 44.5,2.0000005 C44.5,1.1715732 45.171574,0.50000048 46,0.5 z" HorizontalAlignment="Left" Height="12" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="28" Grid.Column="1" Fill="Black" RenderTransformOrigin="0.536,0.59" Canvas.Left="277.484" Canvas.Top="301">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="abanico1" Data="M4,392.70667 C9.807325,393.64118 27.044129,401.91653 31.333333,400.04 33.512124,399.08678 51.380462,382.96702 50.666667,380.70667 49.194912,376.04611 41.256582,371.79219 36,370.04 29.425787,367.8486 25.41652,368.41186 19,371.37333 8.8570314,376.0547 6.7051299,381.64023 4,392.70667 z" HorizontalAlignment="Left" Height="33" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="48" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="149.484" Canvas.Top="190">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-474.494"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFD67070" Offset="1"/>
+                            <GradientStop Color="White" Offset="0.272"/>
+                            <GradientStop Color="#FFDA6767" Offset="0.693"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Path x:Name="abanico2" Data="M4,392.70667 C9.807325,393.64118 27.044129,401.91653 31.333333,400.04 33.512124,399.08678 51.380462,382.96702 50.666667,380.70667 49.194912,376.04611 41.256582,371.79219 36,370.04 29.425787,367.8486 25.41652,368.41186 19,371.37333 8.8570314,376.0547 6.7051299,381.64023 4,392.70667 z" HorizontalAlignment="Left" Height="33" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="48" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="328.484" Canvas.Top="185">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="474.494"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFD67070" Offset="1"/>
+                            <GradientStop Color="White" Offset="0.272"/>
+                            <GradientStop Color="#FFDA6767" Offset="0.693"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="237.234" Canvas.Top="121.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="243.234" Canvas.Top="132.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="246.234" Canvas.Top="116.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="255.234" Canvas.Top="156.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="252.234" Canvas.Top="124.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="236.234" Canvas.Top="105.688"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="252.234" Canvas.Top="108.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="288" Canvas.Top="181"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="237.234" Canvas.Top="142.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="242.234" Canvas.Top="152.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="239.234" Canvas.Top="167.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="238.234" Canvas.Top="194.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="257.234" Canvas.Top="201.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="259.234" Canvas.Top="170.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="255.234" Canvas.Top="139.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="273.234" Canvas.Top="187.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="277.234" Canvas.Top="208.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="251.234" Canvas.Top="184.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="241.234" Canvas.Top="213.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="272.234" Canvas.Top="199.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="266" Canvas.Top="164"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="278.234" Canvas.Top="115.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="281.234" Canvas.Top="166.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="290.234" Canvas.Top="193.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="289.234" Canvas.Top="156.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="278.234" Canvas.Top="152.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="273.234" Canvas.Top="139.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="264" Canvas.Top="210"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="289.234" Canvas.Top="109.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="277.234" Canvas.Top="124.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="274.234" Canvas.Top="131.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="283.234" Canvas.Top="130.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="290.234" Canvas.Top="171.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="279.234" Canvas.Top="106.687"/>
+                <Ellipse HorizontalAlignment="Left" Height="2" Grid.Row="2" Stroke="#FFF1FF00" VerticalAlignment="Top" Width="2" Fill="#FFF1FF00" Grid.Column="1" Canvas.Left="288" Canvas.Top="143"/>
+                <Ellipse HorizontalAlignment="Left" Height="4" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="4" Fill="Black" Grid.Column="1" Canvas.Left="271.484" Canvas.Top="33"/>
+                <Ellipse x:Name="boca_abierta" Height="13" Canvas.Left="251.234" Stroke="Black" Canvas.Top="66" Width="14" Fill="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Rectangle x:Name="brazo_izq" HorizontalAlignment="Left" Height="98" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="16" RadiusX="5.167" RadiusY="5.167" RenderTransformOrigin="0.485,0.01" Grid.Column="1" Fill="#FFE6CCC6" Canvas.Left="208.484" Canvas.Top="98">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="29.823"/>
+                            <TranslateTransform X="23.914" Y="6.241"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="manga_izq" HorizontalAlignment="Left" Height="46" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="17" RadiusX="5.5" RadiusY="5.5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="White" Canvas.Left="195.484" Canvas.Top="147">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="30.207"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="brazo_dere" HorizontalAlignment="Left" Height="98" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="16" RadiusX="5.167" RadiusY="5.167" RenderTransformOrigin="0.485,0.01" Grid.Column="1" Fill="#FFE6CCC6" Canvas.Left="255.484" Canvas.Top="98">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-29.823"/>
+                            <TranslateTransform X="23.914" Y="6.241"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle x:Name="manga_dere" HorizontalAlignment="Left" Height="46" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="17" RadiusX="5.5" RadiusY="5.5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="White" Canvas.Left="315.484" Canvas.Top="146">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-30.207"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+
+</UserControl>

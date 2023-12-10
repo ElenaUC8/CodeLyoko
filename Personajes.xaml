@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="CodeLyoko.Personajes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+
+        <Image x:Name="img_Odd" Source="/Imagenes/imagen_odd.png" Margin="33,172,775,171" PointerReleased="img_Odd_PointerReleased"/>
+        <Image x:Name="img_Ulrich" Source="/Imagenes/imagen_ulrich.png" Margin="141,157,465,135" PointerReleased="img_Ulrich_PointerReleased"/>
+        <Image x:Name="img_Yumi" Source="/Imagenes/imagen_yumi.png" Margin="381,112,185,65" PointerReleased="img_Yumi_PointerReleased"/>
+        <Image x:Name="img_Aelita" Source="/Imagenes/imagen_aelita.png" Margin="610,12,-28,-16" PointerReleased="img_Aelita_PointerReleased"/>
+        <Frame x:Name="frPersonajes" Grid.Column="1" Grid.Row="1" Foreground="Black">
+
+        </Frame>
+
+
+    </Grid>
+</Page>

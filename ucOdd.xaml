@@ -1,0 +1,804 @@
+﻿<UserControl
+    x:Class="CodeLyoko.ucOdd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <Storyboard x:Key="Ataque">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="brazo_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-62.184"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-70.626"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-79.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-87.837"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-94.119"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-94.119"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-83.836"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-74.083"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-62.337"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-7.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-15.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-22"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-19.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-12"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-5.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-4.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-8.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-8.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-17.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-24.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-32.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-32.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-22.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-12.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-4.332"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-6.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="3"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-6.666"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-9.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-29.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-36.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-36.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-23.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-14.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="8.855"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-2.145"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-15.478"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-25.811"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-34.144"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-34.144"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-34.144"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-20.811"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-5.478"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="7.855"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-19.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-15.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-11.958"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-10.958"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-13.624"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-18.957"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-49.308"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-67.629"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-67.629"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="3.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="7.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="8.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="9.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="9.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="9.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="10.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="6.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="2.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-11.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-24.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-35"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-42.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-46.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-46.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-32.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-18.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-4.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="flecha2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flecha2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="208"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flecha2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="flecha3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.5000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flecha3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.5000000" Value="192"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flecha3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02.5000000" Value="4"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="flecha1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flecha1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="191"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flecha1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Boca" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="boca_abierta" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="texto_ataque" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="bocadillo" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Defensa">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="brazo_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-62.184"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-70.626"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-79.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-87.837"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-94.119"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-94.119"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-83.836"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-74.083"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-62.337"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-7.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-15.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-22"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-28"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-19.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-12"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-5.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-4.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-8.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-8.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-17.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-24.999"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-32.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-32.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-22.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-12.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-4.332"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-6.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="3"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-6.666"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_dere3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-9.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-29.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-36.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-36.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-23.666"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-14.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="8.855"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-2.145"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-15.478"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-25.811"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-34.144"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-34.144"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-34.144"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-20.811"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-5.478"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="7.855"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-19.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-15.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-11.958"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-10.958"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-10.291"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-13.624"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-18.957"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-49.308"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-67.629"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-67.629"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="3.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="7.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="8.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="9.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="9.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="9.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="10.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="6.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="2.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="mancha_mano_dere" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-11.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-24.333"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-35"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-42.667"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="-46.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03" Value="-46.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.2000000" Value="-32.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.4000000" Value="-18.334"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:03.6000000" Value="-4.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Boca" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="bocadillo" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="texto_defensa" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="boca_abierta" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="escudo" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+
+        </Grid.RowDefinitions>
+
+        <ProgressBar x:Name="pbVida_Odd" Grid.Column="1" HorizontalAlignment="Center" Width="720" Background="#6600FFB3" BorderBrush="#FF00FFB3" Foreground="#FF00FFB3" Value="100" Height="40"/>
+        <ProgressBar x:Name="pbEnergía_Odd" Grid.Column="1" HorizontalAlignment="Center" Width="720" Grid.Row="1" Value="100" Background="#66F1FF00" Foreground="#FFE6FF00" Height="66"/>
+        <Image x:Name="imRayo" Source="Imagenes/rayo.png" Margin="5,5,7,0" Grid.Row="1"/>
+        <Image x:Name="imCorazon" Source="Imagenes/corazon_azul.png" Margin="5,5,7,0" Grid.Row="0"/>
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <Canvas HorizontalAlignment="Left" Height="313" Margin="40,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="559" Grid.Column="1">
+                <Rectangle HorizontalAlignment="Left" Height="22" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="14" Grid.Column="1" Fill="#FFFFDFBF" Canvas.Left="284.5" Canvas.Top="93"/>
+                <Path Data="M46.75,194.79 C46.885992,191.96137 48,189.38962 48,186.79 48,183.27416 47.375427,182.38492 46.25,179.29 44.729819,175.1095 44.179841,169.7756 40,166.79 35.998733,163.93195 31.854375,161.22042 25.75,165.29 21.684166,168.00056 20.823741,171.81878 19.25,176.54 17.608997,181.46301 18.25,186.93603 18.25,192.54 18.25,198.68527 19.991331,198.85524 25.5,202.79 37.061225,211.04802 33.460268,207.32973 46.5,194.29 46.583333,194.45667 46.666667,194.62333 46.75,194.79 z" Fill="#FFFFDFC1" HorizontalAlignment="Left" Height="66" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="55" Grid.Column="1" Canvas.Left="265.5" Canvas.Top="31"/>
+                <Path Data="M20.75,200.04 C16.083603,194.5754 16,193.96164 16,185.29 16,182.44405 15.75,179.29386 15.75,176.29 15.75,172.94418 16.012825,171.93529 17.75,169.04 17.75,169.87333 17.75,170.70667 17.75,171.54 20.298785,168.99121 21.179003,163.17274 22.5,159.54 24.013632,155.37751 24.862487,151.06503 26.75,147.29 26.75,150.45667 26.75,153.62333 26.75,156.79 30.953584,152.58642 29.42849,144.86151 33.75,140.54 33.75,146.54998 31.5,151.87279 31.5,157.54 32.352061,156.68794 32.788067,156.3116 33,155.04 35.680623,153.96775 37.512363,149.22819 38.25,145.54 38.25,151.43259 38.570086,154.74592 40.75,160.04 42.301468,163.80785 43.960668,167.71134 45.75,171.29 45.75,170.62333 45.75,169.95667 45.75,169.29 49.674172,173.21417 48.555909,179.40341 49.5,185.54 50.286345,190.65124 47.100796,194.44889 44,198.79 44,193.11788 46.074968,186.7649 44.25,181.29 42.720274,176.70082 39.954077,172.40223 38.5,168.04 37.852543,167.78102 37.995428,167.95057 37.5,167.29 35.137637,169.65236 34.878634,173.41137 32.25,176.04 30.281447,172.10289 28.598996,170.53928 24.75,167.79 20.573217,171.96678 19.739296,175.42915 19.25,181.79 19.026615,184.694 19,187.73872 19,190.79 19,194.7412 19.326182,196.46121 20.75,200.04 z" Fill="#FFF1ED64" HorizontalAlignment="Left" Height="88" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="62" Grid.Column="1" Canvas.Left="262.5"/>
+                <Path x:Name="pierna_dere" Data="M0.5,0.5 L27.5,0.5 27.5,1.3811178 39.640499,3.5611634 27.5,71.170624 27.5,73.5 0.5,73.5 z" HorizontalAlignment="Left" Height="112" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="22" RenderTransformOrigin="0.409,0.01" Grid.Column="1" Fill="#FFA000FF" Canvas.Left="301.5" Canvas.Top="191">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="pierna_izq" Data="M0.5,0.5 L27.5,0.5 27.5,1.3811178 39.640499,3.5611634 27.5,71.170624 27.5,73.5 0.5,73.5 z" HorizontalAlignment="Left" Height="112" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="22" RenderTransformOrigin="0.409,0.01" Grid.Column="1" Fill="#FFA000FF" Canvas.Left="263.5" Canvas.Top="191">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle x:Name="cuerpo" HorizontalAlignment="Left" Height="94" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="60" RadiusX="5.5" RadiusY="5.5" Grid.Column="1" Fill="#FFA000FF" Canvas.Left="259.5" Canvas.Top="108"/>
+                <Path x:Name="oreja1" Grid.Column="1" Data="M15.887233,0.5 L15.415207,0.96314573 C11.578861,4.8387059 8.2745306,10.304707 5.7580998,16.885295 L5.5769608,17.371224 5.4251835,17.050763 C3.6630886,13.257014 2.0642722,9.3821629 0.5,5.4031662 5.795294,3.0904435 9.5765126,1.0329715 15.044146,0.55473953 z" Fill="#FFA000FF" HorizontalAlignment="Left" Height="9" Grid.Row="2" Stroke="#FFA000FF" Stretch="Fill" VerticalAlignment="Center" Width="5" RenderTransformOrigin="0.5,0.5" Canvas.Left="275.5" Canvas.Top="45">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="54.808"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Grid.Column="1" Data="M125.66667,122.04 C123.28486,127.61844 122.08238,135.29095 117.66667,139.70667 113.07805,144.29528 108.23335,152.5733 105.33333,158.37333 103.4991,162.0418 110.4138,170.63311 112.66667,176.04 115.74672,183.43213 119.98892,189.46598 124.33333,196.70667 125.64565,198.89386 125.97943,201.16962 129,194.37333 130.74843,190.43937 132.65822,186.2763 135,182.37333 139.20478,175.36537 143.36111,167.32241 147.33333,160.04 151.03346,153.25644 139.87077,144.33256 136.33333,136.37333 133.99347,131.10863 127.77237,125.90186 126.66667,120.37333 126.46034,120.45586 126.18903,120.2565 126,120.37333 125.78865,120.50395 125.8483,120.87048 125.66667,121.04 125.43692,121.25443 125.18022,121.44921 125,121.70667 124.90989,121.8354 124.7268,121.89483 124.66667,122.04 124.58163,122.24531 124.88773,122.68404 124.66667,122.70667" Fill="#FFA000FF" HorizontalAlignment="Left" Height="20" Grid.Row="2" Stroke="#FFA000FF" Stretch="Fill" VerticalAlignment="Center" Width="10" RenderTransformOrigin="0.5,0.5" Canvas.Left="288.5" Canvas.Top="27">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="4.107"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="Nariz" Grid.Column="1" Data="M87.5,175.79 C92.106884,180.48381 97.576781,185.44356 100.5,191.29 105.04914,186.74086 108.73858,181.56868 111.75,175.79" Fill="Transparent" HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="9" RenderTransformOrigin="0.5,0.5" Canvas.Left="283.5" Canvas.Top="70">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="92.02"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="Boca" Grid.Column="1" Data="M87.5,175.79 C92.106884,180.48381 97.576781,185.44356 100.5,191.29 105.04914,186.74086 108.73858,181.56868 111.75,175.79" Fill="Transparent" HorizontalAlignment="Left" Height="4" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="18" RenderTransformOrigin="0.5,0.5" Canvas.Left="280.5" Canvas.Top="82">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.507"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle x:Name="brazo_izq" HorizontalAlignment="Left" Height="79" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="14" RadiusX="2.565" RadiusY="2.565" Grid.Column="1" RenderTransformOrigin="0.503,0.01" Fill="#FFA000FF" Canvas.Left="227.5" Canvas.Top="92">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="62.184"/>
+                            <TranslateTransform X="34.214" Y="20.684"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Path x:Name="mano_izq" HorizontalAlignment="Left" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Data="M39.556995,38.882885 C42.594562,38.882885 45.056995,44.287949 45.056995,50.955433 45.056995,56.372763 43.431404,60.956699 41.192527,62.485224 L41.167413,62.501621 39.496884,65.882885 37.72689,62.342566 37.66591,62.295422 C35.559946,60.602858 34.056995,56.164406 34.056995,50.955433 34.056995,44.287949 36.519429,38.882885 39.556995,38.882885 z M53.681368,28.853556 C56.373568,28.941311 60.234037,31.270202 63.515196,35.043812 67.069782,39.131888 68.850819,43.657696 68.164242,46.280207 L68.156048,46.309059 69.114037,49.95678 65.455362,48.446535 65.378414,48.450971 C62.678612,48.555543 58.632145,46.192319 55.214272,42.261475 50.839394,37.229996 49.151079,31.535446 51.443316,29.542343 52.016375,29.044067 52.783968,28.824305 53.681368,28.853556 z M41.549559,0.50059509 C43.387405,0.48322678 45.196956,0.84552002 46.897577,1.6294098 54.671846,5.2129021 57.225756,16.249886 52.601892,26.2812 48.050278,36.155776 38.240117,41.374991 30.519147,38.117553 L30.153101,37.956019 30.403551,38.088759 C32.907356,39.598907 32.79815,45.356295 30.094282,51.222247 27.826521,56.142076 24.431324,59.624557 21.758196,60.075487 L21.728524,60.079866 18.795969,62.451307 18.670543,58.495173 18.634899,58.426832 C17.430864,56.00812 17.923926,51.34812 20.104465,46.617514 22.54667,41.319234 26.296432,37.687943 29.043768,37.714753 29.338125,37.717626 29.620975,37.762492 29.889476,37.8518 L30.153078,37.956008 29.792502,37.782611 C27.533088,36.650226 25.736466,34.872578 24.45385,32.671003 L24.247386,32.293584 24.302969,32.44803 C25.11961,35.16963 21.692876,39.571172 16.24012,42.627238 11.5144,45.275828 6.7209072,46.098905 4.2929134,44.893169 L4.2663307,44.879276 0.5,45.075152 2.7229729,41.800227 2.7342834,41.723984 C3.1811371,39.059367 6.31814,35.578286 10.862104,33.031565 14.133759,31.197926 17.437893,30.239237 19.967112,30.222956 21.688385,30.211877 23.050752,30.637279 23.799717,31.520427 L23.943913,31.707829 23.712599,31.226231 C21.472763,26.236205 21.558861,19.573795 24.448774,13.304222 28.061167,5.4672585 34.985821,0.56261826 41.549559,0.50059509 z" Height="36" RenderTransformOrigin="0.564613077104584,0.587484032841288" Width="42" Grid.Column="1" Fill="#FFA000FF" Canvas.Left="158.5" Canvas.Top="140">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="49.308"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle x:Name="brazo_dere" HorizontalAlignment="Left" Height="79" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="14" RadiusX="2.565" RadiusY="2.565" Grid.Column="1" RenderTransformOrigin="0.535,0.038" Fill="#FFA000FF" Canvas.Left="337.5" Canvas.Top="92">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-62.184"/>
+                            <TranslateTransform X="-32.996" Y="19.901"/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Path x:Name="mano_dere" HorizontalAlignment="Left" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Data="M39.556995,38.882885 C42.594562,38.882885 45.056995,44.287949 45.056995,50.955433 45.056995,56.372763 43.431404,60.956699 41.192527,62.485224 L41.167413,62.501621 39.496884,65.882885 37.72689,62.342566 37.66591,62.295422 C35.559946,60.602858 34.056995,56.164406 34.056995,50.955433 34.056995,44.287949 36.519429,38.882885 39.556995,38.882885 z M53.681368,28.853556 C56.373568,28.941311 60.234037,31.270202 63.515196,35.043812 67.069782,39.131888 68.850819,43.657696 68.164242,46.280207 L68.156048,46.309059 69.114037,49.95678 65.455362,48.446535 65.378414,48.450971 C62.678612,48.555543 58.632145,46.192319 55.214272,42.261475 50.839394,37.229996 49.151079,31.535446 51.443316,29.542343 52.016375,29.044067 52.783968,28.824305 53.681368,28.853556 z M41.549559,0.50059509 C43.387405,0.48322678 45.196956,0.84552002 46.897577,1.6294098 54.671846,5.2129021 57.225756,16.249886 52.601892,26.2812 48.050278,36.155776 38.240117,41.374991 30.519147,38.117553 L30.153101,37.956019 30.403551,38.088759 C32.907356,39.598907 32.79815,45.356295 30.094282,51.222247 27.826521,56.142076 24.431324,59.624557 21.758196,60.075487 L21.728524,60.079866 18.795969,62.451307 18.670543,58.495173 18.634899,58.426832 C17.430864,56.00812 17.923926,51.34812 20.104465,46.617514 22.54667,41.319234 26.296432,37.687943 29.043768,37.714753 29.338125,37.717626 29.620975,37.762492 29.889476,37.8518 L30.153078,37.956008 29.792502,37.782611 C27.533088,36.650226 25.736466,34.872578 24.45385,32.671003 L24.247386,32.293584 24.302969,32.44803 C25.11961,35.16963 21.692876,39.571172 16.24012,42.627238 11.5144,45.275828 6.7209072,46.098905 4.2929134,44.893169 L4.2663307,44.879276 0.5,45.075152 2.7229729,41.800227 2.7342834,41.723984 C3.1811371,39.059367 6.31814,35.578286 10.862104,33.031565 14.133759,31.197926 17.437893,30.239237 19.967112,30.222956 21.688385,30.211877 23.050752,30.637279 23.799717,31.520427 L23.943913,31.707829 23.712599,31.226231 C21.472763,26.236205 21.558861,19.573795 24.448774,13.304222 28.061167,5.4672585 34.985821,0.56261826 41.549559,0.50059509 z" Height="36" RenderTransformOrigin="0.63,0.047" Width="42" Grid.Column="1" Fill="#FFA000FF" Canvas.Left="373.5" Canvas.Top="140">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-49.308"/>
+                            <TranslateTransform X="-19.291" Y="8.855"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="zapato_izq" Data="M46,0.5 L58,0.5 C58.828426,0.50000048 59.5,1.1715732 59.5,2.0000005 L59.5,11.884 59.5,28 59.5,42.884 C59.5,45.093141 57.709141,46.884 55.5,46.884 L25,46.884 19.5,46.884 C18.533501,46.884 17.647064,46.541219 16.955627,45.970594 L16.69558,45.734247 16.576078,45.700746 C7.1949606,42.966856 0.5,35.797714 0.5,27.384 0.5,18.970288 7.1949606,11.801145 16.576078,9.0672547 L16.69558,9.0337539 16.955627,8.7974052 C17.647064,8.226782 18.533501,7.8840001 19.5,7.8840002 L25,7.8840002 44.5,7.8840002 44.5,2.0000005 C44.5,1.1715732 45.171574,0.50000048 46,0.5 z" HorizontalAlignment="Left" Height="17" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="28" Grid.Column="1" Fill="#FFFDFF00" Canvas.Left="251.5" Canvas.Top="286"/>
+                <Path x:Name="zapato_izq_Copy" Data="M46,0.5 L58,0.5 C58.828426,0.50000048 59.5,1.1715732 59.5,2.0000005 L59.5,11.884 59.5,28 59.5,42.884 C59.5,45.093141 57.709141,46.884 55.5,46.884 L25,46.884 19.5,46.884 C18.533501,46.884 17.647064,46.541219 16.955627,45.970594 L16.69558,45.734247 16.576078,45.700746 C7.1949606,42.966856 0.5,35.797714 0.5,27.384 0.5,18.970288 7.1949606,11.801145 16.576078,9.0672547 L16.69558,9.0337539 16.955627,8.7974052 C17.647064,8.226782 18.533501,7.8840001 19.5,7.8840002 L25,7.8840002 44.5,7.8840002 44.5,2.0000005 C44.5,1.1715732 45.171574,0.50000048 46,0.5 z" HorizontalAlignment="Left" Height="17" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="28" Grid.Column="1" Fill="#FFFDFF00" RenderTransformOrigin="0.5,0.5" Canvas.Left="303.5" Canvas.Top="286">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Ellipse HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="11" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="219.5" Canvas.Top="133">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Path x:Name="ojo_izq" Data="M23.666667,251.20667 C22.578723,250.66734 21.718741,250.27511 20.666667,249.37333 22.524633,247.51537 25.445076,246.92826 27.333333,245.04 29.507609,246.59305 32.441016,246.64768 34.333333,248.54 32.847063,248.83725 32.694048,249.56639 31.666667,250.70667" Fill="White" HorizontalAlignment="Left" Height="7" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="15" Grid.Column="1" Canvas.Left="273.5" Canvas.Top="57"/>
+                <Ellipse HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="11" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="210.5" Canvas.Top="138">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="11" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="201.5" Canvas.Top="143">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="mancha_dere1" HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="11" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="351.5" Canvas.Top="135">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="mancha_dere2" HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="11" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="359.5" Canvas.Top="139">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="mancha_dere3" HorizontalAlignment="Left" Height="6" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="11" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="367.5" Canvas.Top="143">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse HorizontalAlignment="Left" Height="14" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="14" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="182.5" Canvas.Top="147">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse x:Name="mancha_mano_dere" HorizontalAlignment="Left" Height="14" Grid.Row="2" Stroke="#FFC197ED" VerticalAlignment="Center" Width="14" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Fill="#FFC197ED" Canvas.Left="382.5" Canvas.Top="147">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="62.538"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Path x:Name="ceja_izq" Data="M10.666667,201.70667 C16.534773,198.15195 21.834913,192.40635 28.666667,191.04 32.112887,190.35076 35.467163,189.4637 39,188.70667 41.148263,188.24632 42.868605,188.04 45.333333,188.04 47.939558,188.04 49.324775,185.65532 50,189.70667 50.710429,193.96924 55.995808,196.58507 46.333333,195.70667 42.043639,195.31669 37.315669,195.31433 33,195.70667 25.347877,196.40231 18.090481,199.13955 10.666667,201.70667 z" Fill="#FFF1ED7A" HorizontalAlignment="Left" Height="5" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="13" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="274.5" Canvas.Top="52">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="7.303"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Ellipse HorizontalAlignment="Left" Height="31" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="31" Grid.Column="1" Fill="#FFE0EC0B" Canvas.Left="273.5" Canvas.Top="140"/>
+                <Ellipse HorizontalAlignment="Left" Height="18" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="19" Fill="#FFEAD9D9" Grid.Column="1" Canvas.Left="279.5" Canvas.Top="146"/>
+                <Rectangle HorizontalAlignment="Left" Height="19" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="14" RadiusX="3.5" RadiusY="3.5" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFEEF60E" Canvas.Left="265.5" Canvas.Top="236">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90.039"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Rectangle HorizontalAlignment="Left" Height="19" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="14" RadiusX="3.5" RadiusY="3.5" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Fill="#FFEEF60E" Canvas.Left="303.5" Canvas.Top="236">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90.039"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Ellipse x:Name="pupila_izquierda_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="3" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="3" Fill="Black" Canvas.Left="279.5" Canvas.Top="60"/>
+                <Path x:Name="ojo_izq_Copy" Data="M23.666667,251.20667 C22.578723,250.66734 21.718741,250.27511 20.666667,249.37333 22.524633,247.51537 25.445076,246.92826 27.333333,245.04 29.507609,246.59305 32.441016,246.64768 34.333333,248.54 32.847063,248.83725 32.694048,249.56639 31.666667,250.70667" Fill="White" HorizontalAlignment="Left" Height="7" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="15" Grid.Column="1" Canvas.Left="294.5" Canvas.Top="57"/>
+                <Ellipse x:Name="pupila_izquierda_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="3" Grid.Row="2" Stroke="Black" VerticalAlignment="Center" Width="3" Fill="Black" Canvas.Left="300.5" Canvas.Top="60"/>
+                <Path x:Name="ceja_izq_Copy" Data="M10.666667,201.70667 C16.534773,198.15195 21.834913,192.40635 28.666667,191.04 32.112887,190.35076 35.467163,189.4637 39,188.70667 41.148263,188.24632 42.868605,188.04 45.333333,188.04 47.939558,188.04 49.324775,185.65532 50,189.70667 50.710429,193.96924 55.995808,196.58507 46.333333,195.70667 42.043639,195.31669 37.315669,195.31433 33,195.70667 25.347877,196.40231 18.090481,199.13955 10.666667,201.70667 z" Fill="#FFF1ED7A" HorizontalAlignment="Left" Height="5" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Center" Width="13" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="296.5" Canvas.Top="52">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-7.303"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="oreja1_Copy" Grid.Column="1" Data="M15.887233,0.5 L15.415207,0.96314573 C11.578861,4.8387059 8.2745306,10.304707 5.7580998,16.885295 L5.5769608,17.371224 5.4251835,17.050763 C3.6630886,13.257014 2.0642722,9.3821629 0.5,5.4031662 5.795294,3.0904435 9.5765126,1.0329715 15.044146,0.55473953 z" Fill="#FFA000FF" HorizontalAlignment="Left" Height="9" Grid.Row="2" Stroke="#FFA000FF" Stretch="Fill" VerticalAlignment="Center" Width="5" RenderTransformOrigin="0.5,0.5" Canvas.Left="301.5" Canvas.Top="45">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-54.808"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M27.833333,213.04 C24.432429,210.41474 22.458416,207.74792 23.666667,201.70667 24.366076,198.20962 25.761901,194.85429 30.666667,193.87333 29.885729,195.43521 28.673993,196.12608 28.5,198.04 28.323376,199.98286 28.702272,202.02864 28.333333,203.87333 27.408417,208.49791 28.045764,208.9191 31.833333,212.70667 30.277778,212.70667 28.722222,212.70667 27.166667,212.70667" Fill="#FFEF55F7" HorizontalAlignment="Left" Height="11" Grid.Row="2" Stroke="#FFEF55F7" Stretch="Fill" VerticalAlignment="Center" Width="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="274.5" Canvas.Top="79">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-12.205"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M27.833333,213.04 C24.432429,210.41474 22.458416,207.74792 23.666667,201.70667 24.366076,198.20962 25.761901,194.85429 30.666667,193.87333 29.885729,195.43521 28.673993,196.12608 28.5,198.04 28.323376,199.98286 28.702272,202.02864 28.333333,203.87333 27.408417,208.49791 28.045764,208.9191 31.833333,212.70667 30.277778,212.70667 28.722222,212.70667 27.166667,212.70667" Fill="#FFEF55F7" HorizontalAlignment="Left" Height="11" Grid.Row="2" Stroke="#FFEF55F7" Stretch="Fill" VerticalAlignment="Center" Width="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="301.5" Canvas.Top="78">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="12.205"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="flecha1" Data="M9,303.54 C20.562792,283.30511 34.930153,261.2998 49,242.54 56.487357,265.00207 67.562405,281.66481 78,302.54 79.678358,305.89672 84.47427,314.26856 71,303.04 66.848386,299.58032 62.536479,296.57192 58.5,293.04 45.655711,281.80125 56.180826,281.73741 33,292.04 24.135946,295.97958 15.162583,299.2004 7,303.54" Fill="#FFE1E2AF" HorizontalAlignment="Left" Height="24" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="24" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="386.667" Canvas.Top="91" Visibility="Collapsed">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="91.028"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="flecha3" Data="M9,303.54 C20.562792,283.30511 34.930153,261.2998 49,242.54 56.487357,265.00207 67.562405,281.66481 78,302.54 79.678358,305.89672 84.47427,314.26856 71,303.04 66.848386,299.58032 62.536479,296.57192 58.5,293.04 45.655711,281.80125 56.180826,281.73741 33,292.04 24.135946,295.97958 15.162583,299.2004 7,303.54" Fill="#FFE1E2AF" HorizontalAlignment="Left" Height="24" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="24" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="386.667" Canvas.Top="91" Visibility="Collapsed">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="91.028"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="flecha2" Data="M9,303.54 C20.562792,283.30511 34.930153,261.2998 49,242.54 56.487357,265.00207 67.562405,281.66481 78,302.54 79.678358,305.89672 84.47427,314.26856 71,303.04 66.848386,299.58032 62.536479,296.57192 58.5,293.04 45.655711,281.80125 56.180826,281.73741 33,292.04 24.135946,295.97958 15.162583,299.2004 7,303.54" Fill="#FFE1E2AF" HorizontalAlignment="Left" Height="24" Grid.Row="2" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="24" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="387" Canvas.Top="91.333" Visibility="Collapsed">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="91.028"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Ellipse x:Name="boca_abierta" Height="13" Canvas.Left="284.5" Stroke="Black" Canvas.Top="80" Width="14" Fill="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <TextBlock x:Name="texto_ataque" Height="50" Canvas.Left="312" TextWrapping="Wrap" Width="77" FontWeight="Bold" FontSize="14" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="-10.454" Visibility="Collapsed" Text="¡FLECHAS&#xD;&#xA;LÁSER!"/>
+                <Path x:Name="bocadillo" Data="M73.333333,69.898667 C64.759962,69.898667 58.858038,68.486117 51.333333,67.232 49.289307,62.121933 46,59.924259 46,53.232 46,46.324386 42.784828,41.658396 50,36.565333 61.362443,28.544786 78.081709,24.957958 94,27.232 116.12202,30.392289 126.66667,25.257945 126.66667,56.565333 126.66667,71.872797 116.58475,70.565333 94,70.565333 91.724392,81.943372 76.370723,87.145287 66.666667,95.232 66.666667,89.689379 69.733492,85.664977 72,80.565333 72.992992,78.331101 73.978582,75.754975 74.666667,73.232 76.70083,65.7734 72.735587,73.796761 70.666667,69.232" Height="70" Canvas.Left="309.5" Stroke="Black" Stretch="Fill" Canvas.Top="-11.727" Width="82" Visibility="Collapsed"/>
+                <TextBlock x:Name="texto_defensa" Height="44" Canvas.Left="317.5" TextWrapping="Wrap" Canvas.Top="1.273" Width="74" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Collapsed"><Run Language="es-es" Text="¡ESCUDO!"/></TextBlock>
+                <Path x:Name="escudo" Data="M30,0.5 L30.5,0.50632733 30.5,59.493672 30,59.5 C13.7076,59.5 0.5,46.292401 0.5,30 0.5,13.7076 13.7076,0.50000018 30,0.5 z" Height="117" Stroke="Black" Stretch="Fill" Width="53" RenderTransformOrigin="0.5,0.5" Fill="#FFC197EB" HorizontalAlignment="Left" Canvas.Left="409.334" Canvas.Top="57" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+            </Canvas>
+        </Viewbox>
+
+    </Grid>
+
+</UserControl>

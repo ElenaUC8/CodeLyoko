@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="CodeLyoko.InfoAelita"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Image x:Name="img_desierto" Source="/Imagenes/fondo_desierto.jpg" Stretch="Fill"/>
+        <Image x:Name="img_Aelita" Source="/Imagenes/imagen_aelita.png" Margin="0,-30,481,-29"/>
+        <TextBox x:Name="txb_titulo" HorizontalAlignment="Left" Height="105" Margin="543,50,0,0" TextWrapping="Wrap" Text="AELITA" VerticalAlignment="Top" Width="321" TextAlignment="Center" FontSize="72" FontFamily="Showcard Gothic" Background="{x:Null}" Foreground="#FFF31772" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txb_info" HorizontalAlignment="Left" Height="389" Margin="474,155,0,0" TextWrapping="Wrap" Text="Aelita es la guardiana de Lyoko y la hija de su creador, Franz Hopper. Es la principal protagonista de la serie, pues la historia se desarrolla en torno a ella. Tenía 12 años antes de quedar encerrada en Lyoko y perder sus recuerdos. Es la más vulnerable, no solo por su vínculo a Lyoko, sino también por no estar acostumbrada a luchar y a defenderse. Es una chica dulce, y muy simpática, aunque a veces puede llegar (a pesar de su inteligencia) a ser ingenua y muchas veces, insensata. En contadas ocasiones, esa insensatez la ha llevado a verse expuesta al peligro que XANA le ocasiona, aunque no se da cuenta." VerticalAlignment="Top" Width="460" TextAlignment="Justify" FontSize="20" FontFamily="Verdana" Background="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}" TextChanged="txb_info_TextChanged"/>
+    </Grid>
+</Page>

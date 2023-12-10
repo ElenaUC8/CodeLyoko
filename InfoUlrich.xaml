@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="CodeLyoko.InfoUlrich"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Image x:Name="img_hielo" Source="/Imagenes/fondo_hielo.jpg" Stretch="Fill"/>
+        <Image x:Name="img_Ulrich" Source="/Imagenes/imagen_ulrich.png" Margin="-31,24,512,-37"/>
+        <TextBox x:Name="txb_titulo" HorizontalAlignment="Left" Height="105" Margin="543,50,0,0" TextWrapping="Wrap" Text="ULRICH" VerticalAlignment="Top" Width="321" TextAlignment="Center" FontSize="72" FontFamily="Showcard Gothic" Background="{x:Null}" Foreground="#FFFBE02D" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txb_info" HorizontalAlignment="Left" Height="290" Margin="512,160,0,0" TextWrapping="Wrap" Text="Ulrich Stern tiene 13 años y nació en el año 1991, al igual que Odd. No se sabe claramente de su nacionalidad, aunque se supone que es alemán.  Es callado y tímido. Su arma en Lyoko son dos katanas que usa para destruir a los monstruos o desviar los disparos de éstos. Además, tiene diversos poderes como la triplicación, triangular o supersprint. Es el más veloz del grupo." VerticalAlignment="Top" Width="413" Background="{x:Null}" Foreground="White" FocusVisualSecondaryBrush="{x:Null}" FontSize="20" BorderBrush="{x:Null}" TextAlignment="Justify" FontFamily="Verdana"/>
+
+
+    </Grid>
+</Page>

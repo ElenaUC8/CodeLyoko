@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="CodeLyoko.InfoOdd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeLyoko"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Image x:Name="img_bosque" Source="/Imagenes/fondo_bosque.jpg" Stretch="Fill"/>
+        <Image x:Name="img_Odd" Source="/Imagenes/imagen_odd.png" Margin="24,44,580,44"/>
+        <TextBox x:Name="txb_titulo" HorizontalAlignment="Left" Height="105" Margin="543,50,0,0" TextWrapping="Wrap" Text="ODD" VerticalAlignment="Top" Width="321" TextAlignment="Center" FontSize="72" FontFamily="Showcard Gothic" Background="{x:Null}" Foreground="#FFA52DFB" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txb_info" HorizontalAlignment="Left" Height="367" Margin="436,160,0,0" TextWrapping="Wrap" Text="Odd Della Robbia tiene 13 años. No se sabe muy bien de dónde proviene, ya que su madre proviene de Canadá, pero su apellido “Della Robbia” es de origen italiano, y su nombre “Odd” es de origen noruego.  Es el más cómico del grupo, pero también el más enérgico, además del más ingenioso. Le encanta presumir y vacilar. Sus armas en Lyoko son unas “flechas láser” situadas dentro de sus garras. También puede crear un escudo al cruzar sus brazos sobre su pecho. Es el que mejor escala, utilizando sus garras de gato, y el que mejor puntería tiene. Además, es el único capaz de controlar a las mantas voladoras, también gracias a sus garras." VerticalAlignment="Top" Width="536" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextAlignment="Justify" FontSize="20" FontFamily="Verdana"/>
+
+    </Grid>
+</Page>
